@@ -8,7 +8,7 @@ import (
 
 func TestGetApiKey(t *testing.T) {
 	tests := map[string]struct {
-		input http.Header
+		input   http.Header
 		wantKey string
 		wantErr error
 	}{
@@ -57,4 +57,3 @@ func TestGetApiKey(t *testing.T) {
 		})
 	}
 }
-
