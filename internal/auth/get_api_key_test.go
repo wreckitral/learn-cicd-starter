@@ -22,7 +22,7 @@ func TestGetApiKey(t *testing.T) {
 			wantKey: "",
 			wantErr: ErrNoAuthHeaderIncluded,
 		},
-		"malformed header - missing key": {
+		"malformed header, missing key": {
 			input:   http.Header{"Authorization": []string{"ApiKey"}},
 			wantKey: "",
 			wantErr: errors.New("malformed authorization header"),
